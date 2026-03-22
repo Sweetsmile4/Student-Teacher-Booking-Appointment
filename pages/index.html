@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Booking Appointment System</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📚 Appointment System</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Student-Teacher Booking Appointment System</h1>
+            <p>Manage appointments between students and teachers efficiently</p>
+            <div class="hero-buttons">
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="register.html" class="btn btn-secondary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>👨‍🎓 For Students</h3>
+                    <ul>
+                        <li>Search and find teachers</li>
+                        <li>Book appointments</li>
+                        <li>Send messages to teachers</li>
+                        <li>Track appointment status</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍🏫 For Teachers</h3>
+                    <ul>
+                        <li>Set availability and schedule</li>
+                        <li>Approve/cancel appointments</li>
+                        <li>View messages from students</li>
+                        <li>Manage profile</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>⚙️ For Admins</h3>
+                    <ul>
+                        <li>Add and manage teachers</li>
+                        <li>Approve student registrations</li>
+                        <li>View system statistics</li>
+                        <li>Manage users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Student-Teacher Booking Appointment System. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+
+    <!-- App Scripts -->
+    <script src="../src/js/utils/logger.js"></script>
+    <script src="../src/js/utils/firebaseConfig.js"></script>
+    <script src="../src/js/utils/authService.js"></script>
+</body>
+</html>

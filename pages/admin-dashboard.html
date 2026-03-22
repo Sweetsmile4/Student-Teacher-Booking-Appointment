@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student-Teacher Booking System</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📚 Admin Dashboard</div>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="loadSection('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="loadSection('teachers')">Teachers</a></li>
+                <li><a href="#" onclick="loadSection('students')">Students</a></li>
+                <li><button onclick="logout()" class="btn btn-danger">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="section">
+            <h2>Admin Dashboard</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p class="stat-number" id="totalUsers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Teachers</h3>
+                    <p class="stat-number" id="totalTeachers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Appointments</h3>
+                    <p class="stat-number" id="totalAppointments">0</p>
+                </div>
+                <div class="stat-card highlight">
+                    <h3>Pending Approvals</h3>
+                    <p class="stat-number" id="pendingApprovals">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teachers Section -->
+        <div id="teachers" class="section" style="display: none;">
+            <h2>Manage Teachers</h2>
+            
+            <div class="form-section">
+                <h3>Add New Teacher</h3>
+                <form id="addTeacherForm">
+                    <div class="form-group">
+                        <label for="teacherName">Name</label>
+                        <input type="text" id="teacherName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherEmail">Email</label>
+                        <input type="email" id="teacherEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherDept">Department</label>
+                        <input type="text" id="teacherDept" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherSubject">Subject</label>
+                        <input type="text" id="teacherSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherPhone">Phone</label>
+                        <input type="tel" id="teacherPhone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Teacher</button>
+                </form>
+            </div>
+
+            <div class="teachers-list">
+                <h3>Teachers List</h3>
+                <div id="teachersList" class="list-container"></div>
+            </div>
+        </div>
+
+        <!-- Students Section -->
+        <div id="students" class="section" style="display: none;">
+            <h2>Approve Students</h2>
+            
+            <div class="students-list">
+                <h3>Pending Student Registrations</h3>
+                <div id="studentsList" class="list-container"></div>
+            </div>
+
+            <div class="students-list">
+                <h3>All Students</h3>
+                <div id="allStudentsList" class="list-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+
+    <!-- App Scripts -->
+    <script src="../src/js/utils/logger.js"></script>
+    <script src="../src/js/utils/firebaseConfig.js"></script>
+    <script src="../src/js/utils/authService.js"></script>
+    <script src="../src/js/modules/admin.js"></script>
+    <script src="../src/js/pages/admin-dashboard.js"></script>
+</body>
+</html>

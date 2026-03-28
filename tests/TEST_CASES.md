@@ -2,7 +2,7 @@
 
 ## Test Execution Format
 All tests should be run manually in the browser console or using Jest framework.
-
+3
 ---
 
 ## 1. LOGGER UTILITY TESTS
